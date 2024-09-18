@@ -1,0 +1,223 @@
+1. 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, i, c = 0;
+    cout << "Enter any number n: ";
+    cin >> n;
+    for (i = 1; i <= n; i++)
+    {
+        if (n % i == 0)
+        {
+            c++;
+        }
+    }
+    if (c == 2)
+    {
+        cout << "n is a Prime number" << endl;
+    }
+    else
+    {
+        cout << "n is not a Prime number" << endl;
+    }
+    return 0;
+};
+
+output:
+Enter any number n: 6
+n is not a Prime number
+==================================================================================================================================
+2.
+#include <iostream>
+using namespace std;
+
+bool isPrime(int n)
+{
+    if (n == 1 || n == 0) return false;
+    for (int i = 2; i < n; i++)
+    {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+int main()
+{
+    int N = 100;
+    for (int i = 1; i <= N; i++)
+    {
+        if (isPrime(i))
+        {
+            cout << i << " ";
+        }
+    }
+    return 0;
+}
+output
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
+=============================================================================================================
+
+3.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    for (char i = 'A'; i <= 'Z'; i++)
+    {
+        for (char j = 'A'; j <= i; j++)
+        {
+            cout << j;
+        }
+        cout << endl;
+
+    }
+    return 0;
+};
+
+
+output:
+A
+AB
+ABC
+ABCD
+ABCDE
+ABCDEF
+ABCDEFG
+ABCDEFGH
+ABCDEFGHI
+ABCDEFGHIJ
+ABCDEFGHIJK
+ABCDEFGHIJKL
+ABCDEFGHIJKLM
+ABCDEFGHIJKLMN
+ABCDEFGHIJKLMNO
+ABCDEFGHIJKLMNOP
+ABCDEFGHIJKLMNOPQ
+ABCDEFGHIJKLMNOPQR
+ABCDEFGHIJKLMNOPQRS
+ABCDEFGHIJKLMNOPQRST
+ABCDEFGHIJKLMNOPQRSTU
+ABCDEFGHIJKLMNOPQRSTUV
+ABCDEFGHIJKLMNOPQRSTUVW
+ABCDEFGHIJKLMNOPQRSTUVWX
+ABCDEFGHIJKLMNOPQRSTUVWXY
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+======================================================================================================================
+4.
+// assignment 1.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+#include<math.h>
+
+using namespace std;
+
+void menu()
+{
+    cout << "select the option:\n";
+    cout << "1.Addition\n";
+    cout << "2.subtraction\n";
+    cout << "3.multiplication\n";
+    cout << "4.division\n";
+    cout << "5.Exit\n";
+}
+
+void operation(int choice, double a, double b)
+{
+    switch (choice)
+    {
+    case 1:
+        cout << "sum:" << (a + b) << endl;
+        break;
+    case 2:
+        cout << "difference:" << (a - b) << endl;
+        break;
+    case 3:
+        cout << "product:" << (a * b) << endl;
+        break;
+    case 4:
+        if (b != 0)
+
+            cout << "quotient:" << (a / b) << endl;
+        else
+            cout << "error: Division by zero!" << endl;
+        break;
+    case 5:
+        cout << "exiting:" << endl;
+        break;
+        
+    default:
+        cout << "invalid choice!" << endl;
+        
+    }
+}
+
+int main()
+{
+    double num1, num2;
+    int choice;
+
+    do {
+        menu();
+        cout << "Enter your choice: ";
+        cin >> choice;
+        if (choice >= 1 && choice <= 4) {
+            cout << "Enter two numbers: ";
+            cin >> num1 >> num2;
+        }
+        operation(choice, num1, num2);
+
+    } while (choice != 5);
+
+    return 0;
+}
+  
+output:select the option:
+1.Addition
+2.subtraction
+3.multiplication
+4.division
+5.Exit
+Enter your choice: 2
+Enter two numbers: 2
+3
+difference:-1
+
+===========================================================================================================
+
+5
+#include <iostream>
+using namespace std;
+int main()
+{
+
+    int n;
+    cout << "enter the number: " << endl;
+    cin >> n;
+        for (int i = 1; i <=n; i++)
+        {
+
+            for (int j= 1; j <= i; j++)
+            {
+                cout << j;
+            }
+            cout << endl;
+
+        }
+        return 0;
+  
+
+};
+enter the number:
+8
+1
+12
+123
+1234
+12345
+123456
+1234567
+12345678
